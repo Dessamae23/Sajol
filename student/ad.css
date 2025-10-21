@@ -1,0 +1,135 @@
+/* Add Student Page Interactive Design */
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f9fafc 60%, #e0e7ff 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Heading */
+h2 {
+    margin-top: 50px;
+    font-size: 2em;
+    color: #2563eb;
+    letter-spacing: 2px;
+    text-align: center;
+    animation: fadeInTop 0.7s;
+}
+
+@keyframes fadeInTop {
+    from { opacity: 0; transform: translateY(-30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Form Container */
+form {
+    background: #fff;
+    box-shadow: 0 4px 20px #2563eb22;
+    border-radius: 12px;
+    padding: 38px 32px 28px 32px;
+    margin-top: 18px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: fadeInForm 1s;
+}
+
+@keyframes fadeInForm {
+    from { opacity: 0; transform: scale(0.97);}
+    to { opacity: 1; transform: scale(1);}
+}
+
+/* Labels and Inputs */
+label {
+    font-weight: bold;
+    color: #1e3a8a;
+    margin-bottom: 2px;
+    font-size: 1.05em;
+}
+
+input[type="text"], 
+input[type="date"], 
+select {
+    padding: 10px 12px;
+    border-radius: 7px;
+    border: 1.5px solid #cbd5e1;
+    font-size: 1em;
+    background: #f9fafc;
+    transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+    margin-bottom: 6px;
+}
+input[type="text"]:focus, 
+input[type="date"]:focus, 
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 6px #2563eb44;
+    background: #e0e7ff;
+    outline: none;
+}
+
+/* Button */
+input[type="submit"].btn {
+    background: linear-gradient(90deg, #2563eb 70%, #1e3a8a 100%);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    padding: 11px 0;
+    font-size: 1.15em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.10);
+    margin-top: 8px;
+    transition: background 0.28s, transform 0.18s;
+}
+input[type="submit"].btn:hover {
+    background: linear-gradient(90deg, #1d4ed8 70%, #2563eb 100%);
+    transform: scale(1.05);
+}
+
+/* Success/Error Feedback */
+p {
+    color: #22c55e;
+    font-weight: bold;
+    margin-top: 14px;
+    text-align: center;
+    font-size: 1.13em;
+    animation: fadeInMsg 0.8s;
+}
+@keyframes fadeInMsg {
+    from { opacity: 0; transform: translateY(-12px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.error {
+    color: #dc2626;
+}
+
+/* Back Link */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 24px;
+    display: inline-block;
+    transition: color 0.22s;
+    font-size: 1.07em;
+}
+a:hover {
+    color: #1e3a8a;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    h2 { font-size: 1.35em; margin-top: 20px;}
+    form { padding: 18px 8px 14px 8px; max-width: 96vw;}
+}
